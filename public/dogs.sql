@@ -1,0 +1,17 @@
+
+DROP DATABASE IF EXISTS dogs_DB;
+CREATE DATABASE dogs_DB;
+
+USE dogs_DB;
+
+CREATE TABLE adoptions(
+  id INT NOT NULL AUTO_INCREMENT,
+  dog_name VARCHAR(30) NOT NULL,
+  breed VARCHAR(45) NOT NULL,
+  img_url VARCHAR(255) NOT NULL,
+  active INT(2) NOT NULL,
+  train INT(2) NOT NULL,
+  indep INT(2) NOT NULL,
+  descr VARCHAR(255),
+  PRIMARY KEY (id)
+);

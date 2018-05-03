@@ -1,0 +1,46 @@
+.top {
+    background: green;
+}
+.white {
+    color: white;
+}
+.it {
+    font-style: italic;
+}
+.titleJum {
+    font-family: 'Titan One', cursive;
+    font-size: 6.0em;
+}
+.tail {
+    font-family: 'Do Hyeon', sans-serif;
+}
+.padd {
+    padding: 10px;
+    margin: 10px;
+}
+.paddPlus {
+    padding: 10px 0 50px 0;
+}
+.marg-top {
+    margin:  50px 0 10px 0;
+    /* padding: 50px 0 10px 0; */
+}
+.color-me-ready {
+    background:  rgba(5, 11, 105, 0.452);
+    color: white;
+}
+.no-padd {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+.jumbotron {
+    padding-bottom: 0px;
+}
+.nav-item {
+    text-shadow: 100px solid black;
+}
+.text-cent {
+    text-align: center;
+}
+

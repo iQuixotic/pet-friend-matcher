@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue App</title>
+    <base href="/">
+    <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    
+    
+    <link rel="stylesheet" type='text/css' href="CSS/tool.css">
+</head>
+<body>
+    <div id="poster">
+    
+    
+        <div class="container">
+            <div class="jumbotron top ">
+                <h1 class="display-4 white titleJum">Matchy-Match
+                    <i class="fas fa-paw"></i>
+                </h1>
+                <div class="paddPlus">
+                    <p class="lead white tail it">Find your new best pal today !!!</p>
+                </div>
+    
+                <ul class="nav nav-pills nav-fill">
+                    <li class="nav-item ">
+                        <a class="nav-link tail white" href="index#">About</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link tail color-me-ready" href="admin#">Admin</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link tail white" href="questionaire#">Match</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link tail white" href="photos#">Photos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+    
+    
+        <!-- <div class="collapse" id="collapseExample"> -->
+        <div class="jumbotron justify-content-right">
+            <div class="container justify-content-right">
+                <div class="col-md-9 ">
+                    <form class="justify-content-center text-cent paddPlus">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Name</label>
+                            <input type="text" class="form-control" id="dog_name" placeholder="Louis">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Breed</label>
+                            <input v-model = 'breedDog' type="text" class="form-control" id="dog_breed" placeholder="German Shepard">
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Image URL</label>
+                            <input type="text" class="form-control" id="img_url" placeholder="<DFDFSjlk;fdjsa;ljlsa;fjasl>">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Activity Level</label>
+                            <input v-model= 'activeDog' type="text" class="form-control" id="act_lvl" placeholder=22>
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Behavior</label>
+                            <input v-model= 'trainedDog'type="text" class="form-control" id="behave" placeholder=17>
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Independance</label>
+                            <input v-model= 'socialDog'type="text" class="form-control" id="indep" placeholder=14>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Description</label>
+                            <textarea class="form-control" id="descr" rows="3"></textarea>
+                        </div>
+                        <button class="btn btn-primary" @click="numGenReceiver('actNum', 'indNum', 'trainNum', 'breedDog')"> RECEIVE </button>
+    
+                        <button class="btn btn-primary" @click="addToSQL('connectTime', 'connQuer')"> POST </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
+
+      
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="javascript/data/addDog.js"></script>
+   
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>

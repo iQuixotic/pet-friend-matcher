@@ -1,0 +1,24 @@
+{
+  "name": "scratch",
+  "version": "1.0.0",
+  "description": "yes",
+  "main": "router.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "trey",
+  "license": "ISC",
+  "dependencies": {
+    "app": "^0.1.0",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "jquery": "^3.3.1",
+    "mysql": "^2.15.0",
+    "path": "^0.12.7",
+    "pet-names": "^1.0.1",
+    "superheroes": "^1.0.0",
+    "supervillains": "^1.0.0",
+    "vue": "^2.5.16"
+  }
+}

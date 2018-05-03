@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue App</title>
+    <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="CSS/tool.css">
+</head>
+<body>
+    <div id='app'>
+
+
+        <div class="container">
+    
+            <div class="jumbotron top ">
+                <h1 class="display-4 white titleJum">Matchy-Match
+                    <i class="fas fa-paw"></i>
+                </h1>
+                <div class="paddPlus">
+                    <p class="lead white tail it">Find your new best pal today !!!</p>
+                </div>
+    
+                <ul class="nav nav-pills nav-fill">
+                    <li class="nav-item ">
+                        <a class="nav-link tail white" href="index#">About</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link tail white" href="admin#">Admin</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link tail color-me-ready" href="questionaire#">Match</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link tail white" href="photos#">Photos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+
+        <!-- <div v-if= 'pickedArr.length<16' class="collapse " id="collapseExample"> -->
+            <div class="jumbotron text-cent">
+                    <h1>  {{ activeArr[count] }} </h1>
+                    
+<input type="radio" id="one" value=1 v-model="picked">
+<label for="one">     Strongly Disagree</label>
+
+<input type="radio" id="two" value=2 v-model="picked">
+<label for="two">     Slightly Disagree</label>
+
+<input type="radio" id="three" value=3 v-model="picked">
+<label for="three">     Doesn't Matter</label>
+
+<input type="radio" id="four" value=4 v-model="picked">
+<label for="four">     Slightly Agree</label>
+
+<input type="radio" id="five" value=5 v-model="picked">
+<label for="five">     Strongly Agree</label>
+<br>
+
+<button class="btn btn-primary" @click="handlerMi('pickedArr.pop','countDown')" > Back </button>
+<span>Picked: {{ picked }}</span>
+
+
+<span>PickedArr: {{ pickedArr }}</span>
+<button v-if = 'pickedArr.length<15' class="btn btn-primary" @click= "handlerPl('pickedArr.push(parseInt(picked))', 'countUp' )" > {{submit}} </button>
+<button v-else-if='pickedArr.length<16 && activePts === 0' href="http://www.google.com" class="btn btn-primary" @click= "act('soc','trai')" > {{final}} </button>
+
+
+
+<span>social: {{ socialPts }}</span>
+<span>active: {{ activePts }}</span>
+<span>trained: {{ trainedPts }}</span>
+
+            </div>
+        </div>
+
+        
+
+
+        
+    </div>
+    
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="javascript/page/questionLogic.js"></script>
+   
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>
