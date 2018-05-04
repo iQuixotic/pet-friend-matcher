@@ -78,7 +78,6 @@ var app = new Vue({
                 this.trainedPts += this.pickedArr[i];
             }
          },
-        
     }
 })
 

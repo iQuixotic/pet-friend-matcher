@@ -1,4 +1,5 @@
 
+
 //  validate: function(value) {
 //     if (isNaN(value) === false) {
 //       return true;

@@ -3,7 +3,7 @@
 // var app = new Vue({
 //     el: '#app',
 //     data: {
-//         message: 'Hello Trey !! -From Vue',
+//         message: 'Hello !! -From Vue',
 //         intro: 'Welcome to the toot. <small> i am soo coo</small>',
 //         viewed: false, // v-show removes the text
 //         youCan: true, // v-if can remove an element entirely

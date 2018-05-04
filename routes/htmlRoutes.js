@@ -15,20 +15,21 @@ module.exports = function(app) {
   // In each of the below cases the user is shown an HTML page of content
   // ---------------------------------------------------------------------------
 
+  
   app.get("/admin", function(req, res) {
-    res.sendFile(path.join(__dirname, "../admin.html"));
+    res.sendFile(path.join(__dirname, "/../admin.html"));
   });
 
   app.get("/index", function(req, res) {
-    res.sendFile(path.join(__dirname, "../index.html"));
+    res.sendFile(path.join(__dirname, "/../index.html"));
   });
 
   app.get("/photos", function(req, res) {
-    res.sendFile(path.join(__dirname, "../photos.html"));
+    res.sendFile(path.join(__dirname, "/../photos.html"));
   });
 
   app.get("/questionaire", function(req, res) {
-    res.sendFile(path.join(__dirname, "../questionaire.html"));
+    res.sendFile(path.join(__dirname, "/../questionaire.html"));
   });
 
 //   app.get("/reserve", function(req, res) {
