@@ -35,7 +35,7 @@ var app = new Vue({
         submit: 'Next',
         final: 'Find My Friend !!!',
 
-        picked: '', 
+        picked: 3, 
         pickedArr: []
     },
     methods: {
@@ -50,9 +50,9 @@ var app = new Vue({
             this.pickedArr.pop(arg1);
             this.countDown(arg2);
          },
-         handlerPl: function(arg1, arg2){
-            this.countUp(arg2);
-            this.pickedArr.push(parseInt(this.picked))(arg1);
+         handlerPl: function(arg1, arg2, arg3){
+            this.countUp(arg3);
+            this.pickedArr.push(parseInt(this.picked))(arg1, arg2);
          },
         // showQ: function(){
         //     showIt=false;

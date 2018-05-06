@@ -2,7 +2,7 @@
 
 // get request ()
 
-
+let k;
 let pick;
 
 var app = new Vue({
@@ -25,13 +25,12 @@ var app = new Vue({
         { breed: 'Doberman', link: 'https://dog.ceo/api/breed/doberman/images'},
         { breed: 'Bulldog', link: 'https://dog.ceo/api/breed/bulldog/images'},
         ],
-        breedDog: '',
+        breedDog: 'r',
         name: '',
         activeDog: 0,
         socialDog: 0,
         trainedDog: 0,
-        breedHref: '',
-
+        breedHref: 't',
     },
     methods: {
         numGenReceiver: function (arg1, arg2, arg3, arg4, arg5, arg6) {
@@ -56,40 +55,35 @@ var app = new Vue({
             this.breedDog = this.breedDogArr[pick].breed;
         },
         breedImgFu: function () {
-            console.log(pick)
-            let k;
             let i = this.breedDogArr[pick].link
-            console.log(i)
+          
             $.ajax({
                 type: 'GET',
                 url: i,
                 data: { get_url: 'value' }, 
                 dataType: 'json',
                 success: function (data) {
-                    console.log(data.message.length)
                     k = (Math.floor(Math.random() * data.message.length))
-                    console.log(k)
-                    console.log(data.message[k])
-                    breedHref = data.message[k]
-                    console.log(breedHref) 
-                   
+                    app.breedHref = String(data.message[k])
                 }
-
             });
-            // let pic = (Math.floor(Math.random) * i)
-            // this.breedImg = this.breedDogArr[pick].link.message[pic]       
-            // console.log(this.breedImg) 
-            // console.log(i);
-            // console.log(pic);
         },
         nameGiven: function () {
-            let i = (Math.floor(Math.random) * vills.length)
-            this.name = vills[i]
+            $.ajax({
+                type: 'GET',
+                url: 'http://localhost:3010/api/dog/names',
+                dataType: 'json',
+                success: function (data) {
+                    console.log(data.vills.length)
+            let i = (Math.floor(Math.random() * data.vills.length))
+            console.log(i)
+            app.name = data.vills[i]
+            console.log(app.name)
+                }
+            });
         }
     }
 })
 
-                            // console.log(petNames.random());
-                            // $($send).click($dogName=petNames.random());
-                            // console.log('sucess', data);
+                          
 

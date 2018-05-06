@@ -1,22 +1,15 @@
-// ===============================================================================
-// DEPENDENCIES
-// We need to include the path package to get the correct file path for our html
-// ===============================================================================
+
 var path = require("path");
 
+var bodyParser = require("body-parser");
 
-// ===============================================================================
-// ROUTING
-// ===============================================================================
+var ke = require('./apiRoutes')
+
 
 module.exports = function(app) {
-  // HTML GET Requests
-  // Below code handles when users "visit" a page.
-  // In each of the below cases the user is shown an HTML page of content
-  // ---------------------------------------------------------------------------
 
   
-  app.get("/admin", function(req, res) {
+  app.get("/admin", function(req, res) {  
     res.sendFile(path.join(__dirname, "/../admin.html"));
   });
 
@@ -32,13 +25,25 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "/../questionaire.html"));
   });
 
-//   app.get("/reserve", function(req, res) {
-//     res.sendFile(path.join(__dirname, "../public/reserve.html"));
-//   });
 
-  // If no matching route is found default to home
-//   app.get("*", function(req, res) {
-//     res.sendFile(path.join(__dirname, "../public/home.html"));
-//   });
-// };
+let dognames = ke.possNames;
+console.log(ke.possNames);
+
+  
+  app.get("/api/dog/names", function(req, res) {
+    return res.json(dognames);
+  });
+  
+
+  app.post("/api/dogname", function(req, res) {
+    
+    var newdog = req.body;
+    dognames.push(newdog);
+res.json(newdog);
+  });
+
+   
+  
+
+
 }

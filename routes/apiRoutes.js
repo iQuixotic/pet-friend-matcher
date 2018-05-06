@@ -53,15 +53,11 @@ var superheroes = require('superheroes');
  let possNames = {vills: supervillains.all,
     hercs: superheroes.all,
     pets: petNames.all }
-console.log(possNames);
+
 
 // const allBreedList = 'https://dog.ceo/api/breeds/list/all';
 
-var jsonfile = require('jsonfile')
-var file = '../reader&writer.json'
-var obj = { vills: supervillains.all  }
 
-jsonfile.writeFileSync(file, obj, {spaces: 2, EOL: '\n'})
 
 // writeFile(reader&writer, {possNames, allBreedList}, );
 
@@ -73,7 +69,7 @@ jsonfile.writeFileSync(file, obj, {spaces: 2, EOL: '\n'})
 
 // $.ajax({
 //  type: "POST",
-//  url: "http://localhost:3010/admin?#",
+//  url: '/api/dog/names',
 //  data: json,
 //  dataType: "json",
 //  success: function(msg) {
@@ -83,20 +79,8 @@ jsonfile.writeFileSync(file, obj, {spaces: 2, EOL: '\n'})
 
 // $(function (){
     
-//     var $dogName = $('#dog_name');
-//     var $imgUrl = $('#img_url');
-//     var $send = $('#sendName&Url');
+    // var $dogName = $('#dog_name');
+    // var $imgUrl = $('#img_url');
+    // var $send = $('#sendName&Url');
 
-//     $.ajax({
-//         type: 'POST',
-//         url: '/../admin.html',
-//         data: json,
-//         dataType: "json",
-
-//         success: function(data) {
-//             console.log(petNames.random());
-//             $($send).click($dogName=petNames.random());
-//             console.log('sucess', data);
-//         }
-//     });
-// });
+    module.exports = {possNames}
