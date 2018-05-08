@@ -2,7 +2,7 @@
   "name": "scratch",
   "version": "1.0.0",
   "description": "yes",
-  "main": "router.js",
+  "main": "server.js",
   "scripts": {
     "test": "test"
   },
