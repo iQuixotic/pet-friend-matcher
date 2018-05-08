@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="CSS/tool.css">
 </head>
 <body>
+   
     <div id='app'>
 
 
@@ -70,24 +71,28 @@
 <span>PickedArr: {{ pickedArr }}</span>
 <button v-if = 'picked !== NaN && picked !== null && pickedArr.length<15' class="btn btn-primary" @click= "handlerPl('pickedArr', 'picked', 'countUp' )" > {{submit}} </button>
 <button v-else-if='pickedArr.length<16 && activePts === 0' href="http://www.google.com" class="btn btn-primary" @click= "act('soc','trai')" > {{final}} </button>
-
+    
+    <button  class="btn btn-primary" @click= "getDogInfo()" > click this button </button>
 
 
 <span>social: {{ socialPts }}</span>
 <span>active: {{ activePts }}</span>
 <span>trained: {{ trainedPts }}</span>
 
-            </div>
+         
         </div>
 
         
 
 
-        
+       
     </div>
+</div>
     
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- <script src="javascript/data/comparer.js"></script> -->
     <script src="javascript/page/questionLogic.js"></script>
+    
    
 
 

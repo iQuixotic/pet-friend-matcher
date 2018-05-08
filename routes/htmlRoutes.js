@@ -5,6 +5,8 @@ var bodyParser = require("body-parser");
 
 var ke = require('./apiRoutes')
 
+var fs = require('fs')
+
 
 module.exports = function(app) {
 
@@ -25,9 +27,30 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "/../questionaire.html"));
   });
 
+  // app.post("/questionaire", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "/admin/shelter"));
+  // });
+
+  let dataDog = [];
+
+  app.post("/admin/shelter", function(req, res) {  
+   
+    let bod = req.body;
+   
+   
+    dataDog.push(bod);
+    res.json(bod);
+    
+
+  
+      console.log("The file was saved!");
+  }); 
+ 
+  app.get("/admin/shelter", function(req, res) {
+    return res.json(dataDog);
+  });
 
 let dognames = ke.possNames;
-console.log(ke.possNames);
 
   
   app.get("/api/dog/names", function(req, res) {
@@ -39,8 +62,9 @@ console.log(ke.possNames);
     
     var newdog = req.body;
     dognames.push(newdog);
-res.json(newdog);
+    res.json(newdog);
   });
+
 
    
   

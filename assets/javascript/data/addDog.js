@@ -11,26 +11,26 @@ var app = new Vue({
 
     data: {
 
-        breedDogArr: [{ breed: 'Golden Retriever', link:'https://dog.ceo/api/breed/retriever/golden/images' },
+        breedDogArr: [{ breed: 'Golden Retriever', link: 'https://dog.ceo/api/breed/retriever/golden/images' },
         { breed: 'Hound', link: 'https://dog.ceo/api/breed/hound/images' },
-        { breed: 'Pug' , link: 'https://dog.ceo/api/breed/pug/images' },
-        { breed: 'Lab', link: 'https://dog.ceo/api/breed/lab/images'},
+        { breed: 'Pug', link: 'https://dog.ceo/api/breed/pug/images' },
+        { breed: 'Lab', link: 'https://dog.ceo/api/breed/lab/images' },
         { breed: 'Collie', link: 'https://dog.ceo/api/breed/collie/images' },
-        { breed: 'Husky', link: 'https://dog.ceo/api/breed/husky/images'},
-        { breed: 'Pomeranian', link: 'https://dog.ceo/api/breed/pomeranian/images'},
-        { breed: 'Corgi', link: 'https://dog.ceo/api/breed/corgi/images'},
-        { breed: 'Otterhound', link: 'https://dog.ceo/api/breed/otterhound/images'},
-        { breed: 'Mastiff', link: 'https://dog.ceo/api/breed/mastiff/images'},
-        { breed: 'Poodle', link: 'https://dog.ceo/api/breed/poodle/images'},
-        { breed: 'Doberman', link: 'https://dog.ceo/api/breed/doberman/images'},
-        { breed: 'Bulldog', link: 'https://dog.ceo/api/breed/bulldog/images'},
+        { breed: 'Husky', link: 'https://dog.ceo/api/breed/husky/images' },
+        { breed: 'Pomeranian', link: 'https://dog.ceo/api/breed/pomeranian/images' },
+        { breed: 'Corgi', link: 'https://dog.ceo/api/breed/corgi/images' },
+        { breed: 'Otterhound', link: 'https://dog.ceo/api/breed/otterhound/images' },
+        { breed: 'Mastiff', link: 'https://dog.ceo/api/breed/mastiff/images' },
+        { breed: 'Poodle', link: 'https://dog.ceo/api/breed/poodle/images' },
+        { breed: 'Doberman', link: 'https://dog.ceo/api/breed/doberman/images' },
+        { breed: 'Bulldog', link: 'https://dog.ceo/api/breed/bulldog/images' },
         ],
-        breedDog: 'r',
+        breedDog: '',
         name: '',
         activeDog: 0,
         socialDog: 0,
         trainedDog: 0,
-        breedHref: 't',
+        breedHref: '',
     },
     methods: {
         numGenReceiver: function (arg1, arg2, arg3, arg4, arg5, arg6) {
@@ -56,11 +56,11 @@ var app = new Vue({
         },
         breedImgFu: function () {
             let i = this.breedDogArr[pick].link
-          
+
             $.ajax({
                 type: 'GET',
                 url: i,
-                data: { get_url: 'value' }, 
+                data: { get_url: 'value' },
                 dataType: 'json',
                 success: function (data) {
                     k = (Math.floor(Math.random() * data.message.length))
@@ -75,15 +75,50 @@ var app = new Vue({
                 dataType: 'json',
                 success: function (data) {
                     console.log(data.vills.length)
-            let i = (Math.floor(Math.random() * data.vills.length))
-            console.log(i)
-            app.name = data.vills[i]
-            console.log(app.name)
+                    let i = (Math.floor(Math.random() * data.vills.length))
+                    console.log(i)
+                    app.name = data.vills[i]
+                    console.log(app.name)
                 }
             });
+        },
+        board: function () {
+
+            data = {
+                breed: this.breedDog,
+                name: this.name,
+                act: this.activeDog,
+                soc: this.socialDog,
+                train: this.trainedDog,
+                img: this.breedHref,
+            }
+
+            $.ajax({
+                load: console.log(data),
+                type: 'POST',
+                url: 'http://localhost:3010/admin/shelter',
+                data: data,
+
+                success: function (data) {
+
+                }
+            });
+        },
+
+        getDogInfo: function () {
+        //     // $.ajax({
+        //     //     type: 'GET',
+        //     //     url: 'http://localhost:3010/admin/shelter',
+        //     //     dataType: 'json',
+        //     //     success: function (data) {
+        //     //         console.log(data);
+
+             console.log('it works great !!');
         }
+        //});
+
     }
 })
 
-                          
+
 
