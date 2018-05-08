@@ -14,8 +14,8 @@
 <body>
    
     <div id='app'>
-
-
+    
+    
         <div class="container">
     
             <div class="jumbotron top ">
@@ -43,60 +43,58 @@
             </div>
         </div>
     
-
-        <!-- <div v-if= 'pickedArr.length<16' class="collapse " id="collapseExample"> -->
-            <div class="jumbotron text-cent">
-                    <h1>  {{ activeArr[count] }} </h1>
-                    
-<input type="radio" id="one" value=1 v-model="picked">
-<label for="one">     Strongly Disagree</label>
-
-<input type="radio" id="two" value=2 v-model="picked">
-<label for="two">     Slightly Disagree</label>
-
-<input type="radio" id="three" value=3 v-model="picked"/>
-<label for="three">    Doesn't Matter</label>
-
-<input type="radio" id="four" value=4 v-model="picked">
-<label for="four">     Slightly Agree</label>
-
-<input type="radio" id="five" value=5 v-model="picked">
-<label for="five">     Strongly Agree</label>
-<br>
-
-<button class="btn btn-primary" @click="handlerMi('pickedArr.pop','countDown')" > Back </button>
-<span>Picked: {{ picked }}</span>
-
-
-<span>PickedArr: {{ pickedArr }}</span>
-<button v-if = 'picked !== NaN && picked !== null && pickedArr.length<15' class="btn btn-primary" @click= "handlerPl('pickedArr', 'picked', 'countUp' )" > {{submit}} </button>
-<button v-else-if='pickedArr.length<16 && activePts === 0' href="http://www.google.com" class="btn btn-primary" @click= "act('soc','trai')" > {{final}} </button>
     
-    <button  class="btn btn-primary" @click= "getDogInfo()" > click this button </button>
-
-
-<span>social: {{ socialPts }}</span>
-<span>active: {{ activePts }}</span>
-<span>trained: {{ trainedPts }}</span>
-
-         
+        <!-- <div v-if= 'pickedArr.length<16' class="collapse " id="collapseExample"> -->
+        <div class="jumbotron text-cent">
+            <h1> {{ activeArr[count] }} </h1>
+    
+            <input type="radio" id="one" value=1 v-model="picked">
+            <label for="one"> Strongly Disagree</label>
+    
+            <input type="radio" id="two" value=2 v-model="picked">
+            <label for="two"> Slightly Disagree</label>
+    
+            <input type="radio" id="three" value=3 v-model="picked" />
+            <label for="three"> Doesn't Matter</label>
+    
+            <input type="radio" id="four" value=4 v-model="picked">
+            <label for="four"> Slightly Agree</label>
+    
+            <input type="radio" id="five" value=5 v-model="picked">
+            <label for="five"> Strongly Agree</label>
+            <br>
+    
+            <button class="btn btn-primary" @click="handlerMi('pickedArr.pop','countDown')"> Back </button>
+            <span>Picked: {{ picked }}</span>
+    
+    
+            <span>PickedArr: {{ pickedArr }}</span>
+            <button v-if='picked !== NaN && picked !== null && pickedArr.length<15' class="btn btn-primary" @click="handlerPl('pickedArr', 'picked', 'countUp' )">
+            {{submit}} </button>
+            <button v-else-if='pickedArr.length<16 && activePts === 0' href="http://www.google.com" class="btn btn-primary" @click="act('soc','trai')">
+            {{final}} </button>
+    
+            <button class="btn btn-primary" @click="getDogInfo()"> click this button </button>
+    
+    
+            <span>social: {{ socialPts }}</span>
+            <span>active: {{ activePts }}</span>
+            <span>trained: {{ trainedPts }}</span>
+    
+    
         </div>
-
-        
-
-
-       
     </div>
-</div>
+
     
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <!-- <script src="javascript/data/comparer.js"></script> -->
     <script src="javascript/page/questionLogic.js"></script>
-    
    
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 </body>

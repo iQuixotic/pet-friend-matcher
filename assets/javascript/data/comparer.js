@@ -1,7 +1,7 @@
 console.log('you there tommy ?')
 
 var app2 = new Vue({
-  el: '#app2',
+  el: '#app',
   show: true,
 
   data: {

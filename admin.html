@@ -59,45 +59,44 @@
                     <form class="justify-content-center text-cent paddPlus">
                         <div class="form-group">
                             <label for="formGroupExampleInput">Name</label>
-                            <input v-model = 'name' type="text" class="form-control" id="dog_name" placeholder="">
+                            <input v-model='name' type="text" class="form-control" id="dog_name" placeholder="">
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput2">Breed</label>
-                            <input v-model = 'breedDog' type="text" class="form-control" id="dog_breed" placeholder="">
+                            <input v-model='breedDog' type="text" class="form-control" id="dog_breed" placeholder="">
                         </div>
     
     
                         <div class="form-group">
                             <label for="formGroupExampleInput">Image URL</label>
-                            <input v-model= 'breedHref' type="text" class="form-control" id="img_url" placeholder="">
+                            <input v-model='breedHref' type="text" class="form-control" id="img_url" placeholder="">
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput2">Activity Level</label>
-                            <input v-model= 'activeDog' type="text" class="form-control" id="act_lvl" placeholder=22>
+                            <input v-model='activeDog' type="text" class="form-control" id="act_lvl" placeholder=22>
                         </div>
     
                         <div class="form-group">
                             <label for="formGroupExampleInput">Behavior</label>
-                            <input v-model= 'trainedDog'type="text" class="form-control" id="behave" placeholder=17>
+                            <input v-model='trainedDog' type="text" class="form-control" id="behave" placeholder=17>
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput2">Independance</label>
-                            <input v-model= 'socialDog'type="text" class="form-control" id="indep" placeholder=14>
+                            <input v-model='socialDog' type="text" class="form-control" id="indep" placeholder=14>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Description</label>
                             <textarea class="form-control" id="descr" rows="3"></textarea>
                         </div>
-                        <button type = 'button'id='sendName&Url'class="btn btn-primary" @click="numGenReceiver('actNum', 'indNum', 'trainNum', 
-                        'breedDog', 'breedImgFu', 'nameGiven')"> RECEIVE </button>
+                        <button type='button' id='sendName&Url' class="btn btn-primary" @click="numGenReceiver('actNum', 'indNum', 'trainNum', 
+                            'breedDog', 'breedImgFu', 'nameGiven')"> RECEIVE </button>
     
-                        <button type = 'button' class="btn btn-primary" @click="board()"> POST </button>
+                        <button type='button' class="btn btn-primary" @click="board()"> POST </button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    
 
       
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
